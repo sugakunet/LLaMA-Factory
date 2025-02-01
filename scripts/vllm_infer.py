@@ -33,13 +33,13 @@ if is_vllm_available():
 def vllm_infer(
     model_name_or_path: str,
     adapter_name_or_path: str = None,
-    dataset: str = "alpaca_en_demo",
+    dataset: str = "openalex_test",
     dataset_dir: str = "data",
-    template: str = "default",
+    template: str = "pretrain",
     cutoff_len: int = 2048,
     max_samples: int = None,
     vllm_config: str = "{}",
-    save_name: str = "generated_predictions.jsonl",
+    save_name: str = "generated_predictions2.jsonl",
     temperature: float = 0.95,
     top_p: float = 0.7,
     top_k: int = 50,
@@ -131,6 +131,7 @@ def vllm_infer(
     with open(save_name, "w", encoding="utf-8") as f:
         for text, pred, label in zip(prompts, preds, labels):
             f.write(json.dumps({"prompt": text, "predict": pred, "label": label}, ensure_ascii=False) + "\n")
+            print(text,pred)
 
     print("*" * 70)
     print(f"{len(prompts)} generated results have been saved at {save_name}.")

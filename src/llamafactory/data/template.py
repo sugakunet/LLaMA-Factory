@@ -639,6 +639,13 @@ _register_template(
     format_system=StringFormatter(slots=["System: {{content}}\n"]),
 )
 
+_register_template(
+    name="pretrain",
+    format_user=StringFormatter(slots=["{{content}}"]),
+    format_assistant=StringFormatter(slots=["{{content}}", {"eos_token"}, "\n"]),
+    format_system=StringFormatter(slots=["{{content}}\n"]),
+)
+
 
 _register_template(
     name="empty",

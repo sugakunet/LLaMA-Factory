@@ -5,6 +5,12 @@
       "prompt": "text"
     }
   },
+  "openalex_test": {
+    "file_name": "openalex_test.json",
+    "columns": {
+      "prompt": "text"
+    }
+  },
   "openalex_small": {
     "file_name": "/home/ubuntu/austrailia-east-1/works_small.json",
     "columns": {
