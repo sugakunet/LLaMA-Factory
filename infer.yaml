@@ -1,0 +1,4 @@
+model_name_or_path: saves/qwen2.5-32b/works_with_references/full/pretrain
+#template: llama3
+infer_backend: huggingface  # choices: [huggingface, vllm]
+trust_remote_code: true
