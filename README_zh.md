@@ -88,7 +88,7 @@ https://github.com/user-attachments/assets/e6ce34b0-52d5-4f3e-a830-592106c4c272
 | 适配时间      | 模型名称                                                    |
 | ------------ | ---------------------------------------------------------- |
 | Day 0        | Qwen2.5 / Qwen2-VL / QwQ / QvQ / InternLM3 / MiniCPM-o-2.6 |
-| Day 1        | Llama 3 / GLM-4 / PaliGemma2                               |
+| Day 1        | Llama 3 / GLM-4 / Mistral Small / PaliGemma2               |
 
 ## 性能指标
 
@@ -238,7 +238,9 @@ https://github.com/user-attachments/assets/e6ce34b0-52d5-4f3e-a830-592106c4c272
 | [LLaVA-NeXT-Video](https://huggingface.co/llava-hf)               | 7B/34B                           | llava_next_video |
 | [MiniCPM](https://huggingface.co/openbmb)                         | 1B/2B/4B                         | cpm/cpm3         |
 | [MiniCPM-o-2.6/MiniCPM-V-2.6](https://huggingface.co/openbmb)     | 8B                               | minicpm_v        |
+| [Ministral/Mistral-Nemo](https://huggingface.co/mistralai)        | 8B/12B                           | ministral        |
 | [Mistral/Mixtral](https://huggingface.co/mistralai)               | 7B/8x7B/8x22B                    | mistral          |
+| [Mistral Small](https://huggingface.co/mistralai)                 | 24B                              | mistral_small    |
 | [OLMo](https://huggingface.co/allenai)                            | 1B/7B                            | -                |
 | [PaliGemma/PaliGemma2](https://huggingface.co/google)             | 3B/10B/28B                       | paligemma        |
 | [Phi-1.5/Phi-2](https://huggingface.co/microsoft)                 | 1.3B/2.7B                        | -                |
@@ -441,7 +443,7 @@ pip install https://github.com/jllllll/bitsandbytes-windows-webui/releases/downl
 
 #### 安装 Flash Attention-2
 
-如果要在 Windows 平台上开启 FlashAttention-2，需要安装预编译的 `flash-attn` 库，支持 CUDA 12.1 到 12.2，请根据需求到 [flash-attention](https://github.com/bdashore3/flash-attention/releases) 下载对应版本安装。
+如果要在 Windows 平台上开启 FlashAttention-2，请使用 [flash-attention-windows-wheel](https://huggingface.co/lldacing/flash-attention-windows-wheel) 中的脚本自行编译与安装。
 
 </details>
 
