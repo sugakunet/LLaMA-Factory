@@ -11,6 +11,12 @@
       "prompt": "text"
     }
   },
+  "openalex": {
+    "file_name": "/home/ubuntu/austrailia-east-1/works",
+    "columns": {
+      "prompt": "text"
+    }
+  },
   "openalex_test": {
     "file_name": "openalex_test2.json",
     "columns": {
