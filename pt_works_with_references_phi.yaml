@@ -1,13 +1,12 @@
 ### model
 #model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
-#model_name_or_path: microsoft/phi-4
-model_name_or_path: Qwen/Qwen2.5-32B
-  #model_name_or_path: /home/ubuntu/austrailia-east-1/qwen2.5-32b-openalex-with-references
-  #model_name_or_path: saves/qwen2.5-32b/works_with_references/full/pretrain-v2
+model_name_or_path: microsoft/phi-4
+  #model_name_or_path: Qwen/Qwen2.5-32B
+  #model_name_or_path: saves/qwen2.5-32b/works_with_references/full/pretrain
 trust_remote_code: true
-export_hub_model_id: furmaniak/qwen2.5-32b-openalex-with-references-20250131-v2
+export_hub_model_id: furmaniak/phi-4-openalex-with-references-lr4.5
 push_to_hub: true
-resume_from_checkpoint: true
+  #resume_from_checkpoint: true
 
 ### method
 stage: pt
@@ -21,25 +20,25 @@ deepspeed: examples/deepspeed/ds_z3_offload_config.json
 ### dataset
 dataset: openalex_references
 cutoff_len: 8192
-max_samples: 4000000
+  #max_samples: 1500000
 overwrite_cache: true
 preprocessing_num_workers: 16
 #streaming: true
 
 ### output
 #output_dir: saves/llama3-8b/lora/pretrain
-output_dir: saves/qwen2.5-32b/works_with_references/full/qwen2.5-32b-openalex-with-references-20250131-v2
+output_dir: saves/phi-4/works/full/phi-4-openalex-with-references-lr4.5
 logging_steps: 1
 save_steps: 100
 plot_loss: true
 overwrite_output_dir: true
 report_to: wandb
-run_name: qwen2.4-32b-openalex-with-references-v2 # optional
+run_name: phi-4-openalex-with-references-lr4.5 # optional
 
 ### train
 per_device_train_batch_size: 2
 gradient_accumulation_steps: 8
-learning_rate: 0.8e-5
+learning_rate: 0.4e-4
 num_train_epochs: 1.0
 lr_scheduler_type: constant
 warmup_ratio: 0.05
